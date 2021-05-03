@@ -6,7 +6,7 @@ Start one producer, and 2 consumer instances.
 
 Pause one consumer using ctrl+z
 
--> The other consumer don't receive data anymore, and producer eats 100% CPU.
+-> The other consumer doesn't receive data anymore, and producer eats 100% CPU.
 
 ```
 ~/Sources/OpcTest on  main [?] ❯ ./producer
