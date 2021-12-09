@@ -5,7 +5,7 @@
 
 static volatile UA_Boolean running = true;
 
-static int size_mb = 10;
+static int size_kb = 1;
 
 static void
 stopHandler (int sig) {
@@ -21,7 +21,7 @@ callback (UA_Server *server, void *data)
 	UA_Variant value;
 	static int counter = 0;
 
-	byte_string.length = size_mb * 1024* 1024;
+	byte_string.length = size_kb * 1024;
 	byte_string.data = malloc (byte_string.length);
 
 	*((int *) byte_string.data) = counter++;
@@ -47,7 +47,7 @@ main (int argc, char **argv)
 	signal(SIGTERM, stopHandler);
 
 	if (argc > 1)
-		size_mb = atoi (argv[1]);
+		size_kb = atoi (argv[1]);
 
 	server = UA_Server_new ();
 	config = UA_Server_getConfig (server);
