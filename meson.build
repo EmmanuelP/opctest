@@ -1,6 +1,6 @@
 project('opctest', 'c', default_options : ['c_std=c99'] )
 
-opc_dep = dependency('open62541', version:'>=1.2.0', method : 'cmake')
+opc_dep = dependency('open62541', version:'=>1.3.0')
 
 opctest_dependencies = [opc_dep]
 
