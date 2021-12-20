@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://github.com/open62541/open62541.git
+revision = 1.3
+clone-recursive=true
+
+[provide]
+dependency_names = open62541
